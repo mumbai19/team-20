@@ -37,73 +37,7 @@
 	</div>
 
 	<!-- Header section -->
-	<header class="header-section">
-		<div class="header-top">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-2 text-center text-lg-left">
-						<!-- logo -->
-						<a href="./index.html" class="site-logo">
-							<img src="img/logo.png" alt="">
-						</a>
-					</div>
-					<div class="col-xl-6 col-lg-5">
-						<form class="header-search-form">
-							<input type="text" placeholder="Search on divisima ....">
-							<button><i class="flaticon-search"></i></button>
-						</form>
-					</div>
-					<div class="col-xl-4 col-lg-5">
-						<div class="user-panel">
-							<div class="up-item">
-								<i class="flaticon-profile"></i>
-								<a href="#">Sign</a> In or <a href="#">Create Account</a>
-							</div>
-							<div class="up-item">
-								<div class="shopping-card">
-									<i class="flaticon-bag"></i>
-									<span>0</span>
-								</div>
-								<a href="#">Shopping Cart</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<nav class="main-navbar">
-			<div class="container">
-				<!-- menu -->
-				<ul class="main-menu">
-					<li><a href="#">Home</a></li>
-					<li><a href="#">Women</a></li>
-					<li><a href="#">Men</a></li>
-					<li><a href="#">Jewelry
-						<span class="new">New</span>
-					</a></li>
-					<li><a href="#">Shoes</a>
-						<ul class="sub-menu">
-							<li><a href="#">Sneakers</a></li>
-							<li><a href="#">Sandals</a></li>
-							<li><a href="#">Formal Shoes</a></li>
-							<li><a href="#">Boots</a></li>
-							<li><a href="#">Flip Flops</a></li>
-						</ul>
-					</li>
-					<li><a href="#">Pages</a>
-						<ul class="sub-menu">
-							<li><a href="./product.html">Product Page</a></li>
-							<li><a href="./category.html">Category Page</a></li>
-							<li><a href="./cart.html">Cart Page</a></li>
-							<li><a href="./checkout.html">Checkout Page</a></li>
-							<li><a href="./contact.html">Contact Page</a></li>
-						</ul>
-					</li>
-					<li><a href="#">Blog</a></li>
-				</ul>
-			</div>
-		</nav>
-	</header>
+	<?php include('navbar.php');?>
 	<!-- Header section end -->
 
 
@@ -125,10 +59,9 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-6 contact-info">
-					<h3>Get in touch</h3>
-					<p>Main Str, no 23, New York</p>
-					<p>+546 990221 123</p>
-					<p>hosting@contact.com</p>
+					<p><b>President</b>     Lopamudra Roychoudury (9821694994 / <a href="mailto:lopa@trishul-ngo.org">lopa@trishul-ngo.org )</a></p>
+					<p><b>Treasurer and CEO</b>      M. Asif  (9819983722 / 9619182010 /<a href="mailto:asif@trishul-ngo.org">asif@trishul-ngo.org )</a></p>
+					<p><a href="info@trishul-ngo.org">info@trishul-ngo.org</a></p>
 					<div class="contact-social">
 						<a href="#"><i class="fa fa-pinterest"></i></a>
 						<a href="#"><i class="fa fa-facebook"></i></a>
@@ -146,7 +79,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="map"><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14376.077865872314!2d-73.879277264103!3d40.757667781624285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1546528920522" style="border:0" allowfullscreen></iframe></div>
+		<div class="map"><iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d957.3497495203046!2d72.81294551461622!3d19.12602959843875!2m3!1f0!2f39.181710525862904!3f0!3m2!1i1024!2i768!4f35!4m13!3e2!4m5!1s0x3be7b604c39b501d%3A0xf9e515ec61006975!2sTrishul+(NGO)%2C+131%2F4%2C+Trishul+Women+Empowerment+Program%2C+Part+After+Welfare+High+School+Ground%2C%2C+Aram+Nagar+Rd%2C+Aram+Nagar+Part+1%2C+Versova%2C+Andheri+West%2C+Mumbai%2C+Maharashtra+400061!3m2!1d19.1327689!2d72.8149409!4m5!1s0x3be7b604d9fb3b59%3A0xed9a82e85c609aa0!2sTrishul+Learning+Centre+(Trishul+-+NGO)%2C+Joseph+Patel+Wadi%2C+Opp.+Cooperative+Housing+Society%2C%2C+Aram+Nagar+Rd%2C+Aram+Nagar%2C+Versova%2C+Andheri+West%2C+Mumbai%2C+Maharashtra+400061!3m2!1d19.1334107!2d72.8153275!5e1!3m2!1sen!2sin!4v1542117146001" style="border:0" allowfullscreen></iframe></div>
 	</section>
 	<!-- Contact section end -->
 
