@@ -37,7 +37,7 @@
 	</div>
 
 	<!-- Header section -->
-	@include('UI.inc.navbar')
+	@include('UI.navbar')
 	<!-- Header section end -->
 
 

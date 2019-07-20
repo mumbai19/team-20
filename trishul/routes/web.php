@@ -22,3 +22,15 @@ Route::get('/product', function () {
 Route::get('/category', function () {
     return view('UI.category');
 });
+
+Route::get('/cart', function () {
+    return view('UI.cart');
+});
+
+Route::get('/donate', function () {
+    return view('UI.donate');
+});
+
+Route::get('/contact', function () {
+    return view('UI.contact');
+});

@@ -37,7 +37,7 @@
 	</div>
 
 	<!-- Header section -->
-	<?php include('navbar.php');?>
+	@include('UI.navbar')
 	<!-- Header section end -->
 
 

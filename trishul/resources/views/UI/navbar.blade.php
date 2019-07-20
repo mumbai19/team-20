@@ -23,7 +23,7 @@
                                 <i class="flaticon-bag"></i>
                                 <span>0</span>
                             </div>
-                            <a href="cart.blade.php">Shopping Cart</a>
+                            <a href="{{ url('/cart') }}">Shopping Cart</a>
                         </div>
                     </div>
                 </div>
@@ -34,7 +34,7 @@
         <div class="container">
             <!-- menu -->
             <ul class="main-menu">
-                <li><a href="index">Home</a></li>
+                <li><a href="{{ url('/') }}">Home</a></li>
                 <li><a href="#">Products</a>
                     <ul class="sub-menu">
                         <li><a href="{{ url('/category') }}">Bags</a></li>
@@ -47,8 +47,8 @@
                         <li><a href="#">Stoles</a></li>
                     </ul>
                 </li>
-                <li><a href="donate.php">Donate</a></li>
-                <li><a href="contact.php">Contact us</a></li>
+                <li><a href="{{ url('/donate') }}">Donate</a></li>
+                <li><a href="{{ url('/contact') }}">Contact us</a></li>
             </ul>
         </div>
     </nav>
