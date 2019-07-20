@@ -12,9 +12,17 @@ class ProductController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function list_products($category)
     {
-        //
+        // $user = user::find($id);
+        // $role=$user->role;
+        // if($role!=0)
+        // return redirect('/logout');
+        // else
+        // {
+        // $grvs= DB::table('grievances')->select('category','description','subject','id','created_at','updated_at','status') ->where('category', $id1)->where('status',1)->paginate(4);
+        // return view('admin.approved')->with('grvs',$grvs);
+        
     }
 
     /**

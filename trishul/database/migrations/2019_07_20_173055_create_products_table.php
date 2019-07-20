@@ -22,6 +22,7 @@ class CreateProductsTable extends Migration
             $table->integer('prod_discount');
             $table->binary('prod_image');
             $table->integer('prod_quantity');
+            $table->integer('prod_sold');
         });
     }
 
