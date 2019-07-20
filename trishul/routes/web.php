@@ -43,3 +43,6 @@ Auth::routes();
 Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
 
 Route::get('/category/{category}' , 'ProductController@list_products');
+
+Route::get('/cart/{product}/{category}' ,  'CartController@add_to_cart');
+
