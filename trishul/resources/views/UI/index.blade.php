@@ -45,7 +45,7 @@
 	<!-- Hero section -->
 	<section class="hero-section">
 		<div class="hero-slider owl-carousel">
-			<div class="hs-item set-bg" data-setbg="img/product/bags/bags_20.jpg">
+			<div class="hs-item set-bg" data-setbg="img/product/bags/bags_21.jpg">
 				<div class="container">
 					<div class="row">
 						<div class="col-xl-6 col-lg-7 text-black">
