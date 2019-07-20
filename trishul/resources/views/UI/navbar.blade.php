@@ -38,13 +38,13 @@
                 <li><a href="#">Products</a>
                     <ul class="sub-menu">
                         <li><a href="{{ url('/category') }}">Bags</a></li>
-                        <li><a href="#">Keychains</a></li>
-                        <li><a href="#">Bookmarks</a></li>
-                        <li><a href="#">Paperweights</a></li>
-                        <li><a href="#">Greeting Cards</a></li>
-                        <li><a href="#">Candles</a></li>
-                        <li><a href="#">Jewellery</a></li>
-                        <li><a href="#">Stoles</a></li>
+                        <li><a href="{{ url('/category') }}">Keychains</a></li>
+                        <li><a href="{{ url('/category') }}">Bookmarks</a></li>
+                        <li><a href="{{ url('/category') }}">Paperweights</a></li>
+                        <li><a href="{{ url('/category') }}">Greeting Cards</a></li>
+                        <li><a href="{{ url('/category') }}">Candles</a></li>
+                        <li><a href="{{ url('/category') }}">Jewellery</a></li>
+                        <li><a href="{{ url('/category') }}">Stoles</a></li>
                     </ul>
                 </li>
                 <li><a href="{{ url('/donate') }}">Donate</a></li>
