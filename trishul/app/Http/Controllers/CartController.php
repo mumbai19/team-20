@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Cart;
+use App\Product;
 use Illuminate\Http\Request;
 
 class CartController extends Controller
@@ -12,6 +13,22 @@ class CartController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    public function add_to_cart(Request $req)
+    {
+        dd($req);
+        $user = auth()->user();
+        if(Auth::check())
+        {
+            $cart = new Cart();
+            $cart->cart_id = 0;
+            $cart->prod_id = $req;
+            $cart->cart_id = $user->id;
+            $cart->save();
+            return redirect("/");
+        }
+            
+    }
     public function index()
     {
         //

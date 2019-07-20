@@ -27,9 +27,9 @@ class ProductController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function add_product(Request $request)
+    public function create()
     {
-        // $product = 
+        //
     }
 
     /**

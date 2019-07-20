@@ -1,4 +1,4 @@
-@include('UI.navbar')
+	@include('UI.navbar')
 	<!-- Header section end -->
 
 	<!-- Category section -->
@@ -7,16 +7,19 @@
 					<div class="row">
 							<?php 
 								if($category==0)
-								$category="bags";
+								$category1="bags";
 							?>
 							
 							@foreach ($products as $product)
 							<div class="col-lg-3 col-sm-3" style="">
 								<div class="product-item">
 									<div class="pi-pic">
-										<img src="../img/product/{{$category}}/{{$category}}_{{$product->prod_id}}.jpg" alt="Hey" class="img-thumbnail" style="height:400px;width:500px">
+										<img src="../img/product/{{$category1}}/{{$category1}}_{{$product->prod_id}}.jpg" alt="Hey" class="img-thumbnail" style="height:400px;width:500px">
 										<div class="pi-links">
-											<a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
+										<form action='/cart/{{$product->prod_id}}/{{$category}}' method=POST>
+											<button class="add-card" type="submit">
+												<i class="flaticon-bag"></i><span>ADD TO CART</span></button>
+										</form>
 										</div>
 									</div>
 									<div class="pi-text">
