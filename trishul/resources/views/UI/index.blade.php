@@ -370,7 +370,7 @@
 
 
 	<!-- Footer section -->
-	<section class="footer-section">
+	{{-- <section class="footer-section">
 		<div class="container">
 			<div class="footer-logo text-center">
 				<a href="index.html"><img src="./img/logo-light.png" alt=""></a>
@@ -467,7 +467,8 @@
 
 			</div>
 		</div>
-	</section>
+	</section> --}}
+	@include('UI.footer')
 	<!-- Footer section end -->
 
 
