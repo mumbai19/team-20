@@ -35,8 +35,8 @@ Route::get('/donate', function () {
     return view('UI.donate');
 });
 
-Route::get('/contact', function () {
-    return view('UI.contact');
+Route::get('asia/japan', function () {
+    return view('UI.donate');
 });
 Auth::routes();
 
