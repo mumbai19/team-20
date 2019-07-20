@@ -41,3 +41,5 @@ Route::get('/contact', function () {
 Auth::routes();
 
 Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
+
+Route::get('/category/{category}' , 'ProductController@list_products');

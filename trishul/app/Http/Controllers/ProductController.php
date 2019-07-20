@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Product;
 use Illuminate\Http\Request;
+use DB;
 
 class ProductController extends Controller
 {
@@ -14,14 +15,10 @@ class ProductController extends Controller
      */
     public function list_products($category)
     {
-        // $user = user::find($id);
-        // $role=$user->role;
-        // if($role!=0)
-        // return redirect('/logout');
-        // else
-        // {
-        // $grvs= DB::table('grievances')->select('category','description','subject','id','created_at','updated_at','status') ->where('category', $id1)->where('status',1)->paginate(4);
-        // return view('admin.approved')->with('grvs',$grvs);
+        $products = DB::table('products')->select('prod_id','prod_name','prod_desc','prod_price','prod_discount','prod_image','prod_quantity') ->where('prod_category', $category)->orderBy('prod_sold', 'DESC')->get();
+        return view('UI.category')->with('products',$products)->with('category',$category);
+        // return ($products);
+        return view('UI.category');
         
     }
 
