@@ -16,7 +16,12 @@
                     <div class="user-panel">
                         <div class="up-item">
                             <i class="flaticon-profile"></i>
-                            <a href="/login">Sign</a> In or <a href="/register">Create Account</a>
+                            @if(Auth::check())
+                                {{Auth::user()->name}}
+                                <a href="{{ url('/logout') }}"> &nbsp Logout </a>
+                            @else
+                                <a href="/login">Sign</a> In or <a href="/register">Create Account</a>
+                            @endif
                         </div>
                         <div class="up-item">
                             <div class="shopping-card">
