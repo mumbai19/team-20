@@ -31,10 +31,13 @@ Route::get('/donate', function () {
     return view('UI.donate');
 });
 
-Route::get('/contact', function () {
-    return view('UI.contact');
+Route::get('asia/japan', function () {
+    return view('UI.donate');
 });
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/category/{category}' , 'ProductController@list_products');
+// Route::get('/add_to_cart' , 'CartController@add_to_cart');
+
+Route::post('/', 'ProductController@add_product');
