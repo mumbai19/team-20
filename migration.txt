@@ -1,0 +1,50 @@
+//Cart
+
+ Schema::create('cart', function (Blueprint $table) {
+            $table->increments('cart_id');
+            $table->integer('cust_id');
+            $table->integer('prod_id');
+        });
+
+
+//customer
+
+ Schema::create('customer', function (Blueprint $table) {
+            $table->increments('cust_id');
+            $table->mediumText('cust_name');
+            $table->mediumText('cust_email');
+            $table->integer('cust_phone');
+            $table->mediumText('cust_address');
+        });
+
+//Product
+
+ Schema::create('product', function (Blueprint $table) {
+            $table->increments('prod_id');
+            $table->mediumText('prod_name');
+            $table->integer('prod_category');
+            $table->mediumText('prod_desc');
+            $table->integer('prod_price');
+            $table->integer('prod_discount');
+            $table->binary('prod_image');
+            $table->integer('prod_quantity');
+
+            
+        });
+
+
+//Order
+
+ Schema::create('order', function (Blueprint $table) {
+            $table->increments('o_id');
+            $table->integer('transaction_id');
+            $table->integer('prod_id');
+            $table->integer('cust_id');
+            $table->mediumText('date');
+            $table->integer('prod_price');
+            
+
+            
+        });
+
+
