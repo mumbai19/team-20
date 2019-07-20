@@ -45,15 +45,14 @@
 	<!-- Hero section -->
 	<section class="hero-section">
 		<div class="hero-slider owl-carousel">
-			<div class="hs-item set-bg" data-setbg="img/bg.jpg">
+			<div class="hs-item set-bg" data-setbg="img/product/bags/bags_20.jpg">
 				<div class="container">
 					<div class="row">
-						<div class="col-xl-6 col-lg-7 text-white">
-							<span>New Arrivals</span>
-							<h2>denim jackets</h2>
+						<div class="col-xl-6 col-lg-7 text-black">
+							<span>Artifacts</span>
+							<h2>Bags</h2>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum sus-pendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
 							<a href="#" class="site-btn sb-line">DISCOVER</a>
-							<a href="#" class="site-btn sb-white">ADD TO CART</a>
 						</div>
 					</div>
 					<div class="offer-card text-white">
@@ -63,15 +62,14 @@
 					</div>
 				</div>
 			</div>
-			<div class="hs-item set-bg" data-setbg="img/bg-2.jpg">
+			<div class="hs-item set-bg" data-setbg="img/product/greeting_cards/greeting_cards_13.jpg" style="color:black !important">
 				<div class="container">
 					<div class="row">
-						<div class="col-xl-6 col-lg-7 text-white">
-							<span>New Arrivals</span>
-							<h2>denim jackets</h2>
+						<div class="col-xl-6 col-lg-7 text-black">
+							<span>Artifacts</span>
+							<h2>Greeting Cards</h2>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum sus-pendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
 							<a href="#" class="site-btn sb-line">DISCOVER</a>
-							<a href="#" class="site-btn sb-white">ADD TO CART</a>
 						</div>
 					</div>
 					<div class="offer-card text-white">
@@ -204,7 +202,7 @@
 
 
 
-	<!-- Product filter section -->
+	{{-- <!-- Product filter section -->
 	<section class="product-filter-section">
 		<div class="container">
 			<div class="section-title">
@@ -348,10 +346,10 @@
 			</div>
 		</div>
 	</section>
-	<!-- Product filter section end -->
+	<!-- Product filter section end --> --}}
 
 
-	<!-- Banner section -->
+	{{-- <!-- Banner section -->
 	<section class="banner-section">
 		<div class="container">
 			<div class="banner set-bg" data-setbg="img/banner-bg.jpg">
@@ -362,7 +360,7 @@
 			</div>
 		</div>
 	</section>
-	<!-- Banner section end  -->
+	<!-- Banner section end  --> --}}
 
 
 	<!-- Footer section -->
