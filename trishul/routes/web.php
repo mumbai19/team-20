@@ -34,3 +34,6 @@ Route::get('/donate', function () {
 Route::get('/contact', function () {
     return view('UI.contact');
 });
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
