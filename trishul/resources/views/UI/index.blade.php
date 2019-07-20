@@ -48,7 +48,10 @@
 			<div class="hs-item set-bg" data-setbg="img/product/bags/bags_21.jpg">
 				<div class="container">
 					<div class="row">
-						<div class="col-xl-6 col-lg-7 text-black">
+							<div class="col-xl-6 col-lg-7 text-white" style="background: rgba(0, 0, 0, 0.6); padding-top:20px;
+							padding-right:20px;
+							padding-bottom:20px;
+							padding-left:20px">
 							<span>Artifacts</span>
 							<h2>Bags</h2>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum sus-pendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
@@ -57,7 +60,7 @@
 					</div>
 					<div class="offer-card text-white">
 						<span>from</span>
-						<h2>$29</h2>
+						<h2>₹ 60</h2>
 						<p>SHOP NOW</p>
 					</div>
 				</div>
@@ -65,7 +68,10 @@
 			<div class="hs-item set-bg" data-setbg="img/product/greeting_cards/greeting_cards_13.jpg" style="color:black !important">
 				<div class="container">
 					<div class="row">
-						<div class="col-xl-6 col-lg-7 text-black">
+							<div class="col-xl-6 col-lg-7 text-white" style="background: rgba(0, 0, 0, 0.6); padding-top:20px;
+							padding-right:20px;
+							padding-bottom:20px;
+							padding-left:20px">
 							<span>Artifacts</span>
 							<h2>Greeting Cards</h2>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum sus-pendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
@@ -74,7 +80,7 @@
 					</div>
 					<div class="offer-card text-white">
 						<span>from</span>
-						<h2>$29</h2>
+						<h2>₹ 60</h2>
 						<p>SHOP NOW</p>
 					</div>
 				</div>
@@ -364,7 +370,7 @@
 
 
 	<!-- Footer section -->
-	<section class="footer-section">
+	{{-- <section class="footer-section">
 		<div class="container">
 			<div class="footer-logo text-center">
 				<a href="index.html"><img src="./img/logo-light.png" alt=""></a>
@@ -461,7 +467,8 @@
 
 			</div>
 		</div>
-	</section>
+	</section> --}}
+	@include('UI.footer')
 	<!-- Footer section end -->
 
 

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Product;
 use Illuminate\Http\Request;
+use DB;
 
 class ProductController extends Controller
 {
@@ -15,7 +16,9 @@ class ProductController extends Controller
     public function list_products($category)
     {
         $products = DB::table('products')->select('prod_id','prod_name','prod_desc','prod_price','prod_discount','prod_image','prod_quantity') ->where('prod_category', $category)->orderBy('prod_sold', 'DESC')->get();
-        return view('admin.approved')->with('products',$products);
+        return view('UI.category')->with('products',$products)->with('category',$category);
+        // return ($products);
+        return view('UI.category');
         
     }
 

@@ -11,6 +11,10 @@
 |
 */
 
+// Route::get('/home', function () {
+//     return view('UI.index');
+// });
+
 Route::get('/', function () {
     return view('UI.index');
 });
@@ -36,8 +40,6 @@ Route::get('asia/japan', function () {
 });
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/category/{category}' , 'ProductController@list_products');
-// Route::get('/add_to_cart' , 'CartController@add_to_cart');
+Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
 
-Route::post('/', 'ProductController@add_product');
+Route::get('/category/{category}' , 'ProductController@list_products');
