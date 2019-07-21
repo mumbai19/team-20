@@ -35,11 +35,14 @@ Route::get('/donate', function () {
     return view('UI.donate');
 });
 
-Route::get('/contact', function () {
-    return view('UI.contact');
+Route::get('asia/japan', function () {
+    return view('UI.donate');
 });
 Auth::routes();
 
 Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
 
 Route::get('/category/{category}' , 'ProductController@list_products');
+
+Route::get('/cart/{product}/{category}' ,  'CartController@add_to_cart');
+

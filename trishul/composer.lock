@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "94d4bf9ac7f4a933030e46a346ee2917",
+    "content-hash": "fa028dbe754455028a182e66e420a3db",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -377,6 +377,43 @@
                 "trusted proxy"
             ],
             "time": "2019-01-10T14:06:47+00:00"
+        },
+        {
+            "name": "froiden/sql-generator",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Froiden/sql-generator.git",
+                "reference": "03d517276c8d1f5127d578b9986b7b4ba9f20e6f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Froiden/sql-generator/zipball/03d517276c8d1f5127d578b9986b7b4ba9f20e6f",
+                "reference": "03d517276c8d1f5127d578b9986b7b4ba9f20e6f",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/framework": ">= 5.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Froiden\\SqlGenerator\\": "src",
+                    "Froiden\\SqlGenerator\\Tests\\": "tests"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jayant Soni",
+                    "email": "jayant@froiden.com"
+                }
+            ],
+            "description": "convert Laravel migrations to raw SQL scripts",
+            "time": "2018-06-26T08:11:09+00:00"
         },
         {
             "name": "jakub-onderka/php-console-color",
@@ -4651,7 +4688,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "froiden/sql-generator": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {

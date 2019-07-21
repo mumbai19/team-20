@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+{{-- <!DOCTYPE html>
 <html lang="zxx">
 <head>
 	<title>Divisima | eCommerce Template</title>
@@ -31,12 +31,8 @@
 
 </head>
 <body>
-	<!-- Page Preloder -->
-	<div id="preloder">
-		<div class="loader"></div>
-	</div>
 
-	<!-- Header section -->
+	<!-- Header section --> --}}
 	@include('UI.navbar')
 	<!-- Header section end -->
 
@@ -55,7 +51,7 @@
 							<span>Artifacts</span>
 							<h2>Bags</h2>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum sus-pendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
-							<a href="#" class="site-btn sb-line">DISCOVER</a>
+							<a href="{{ url('/category/0') }}" class="btn btn-dark">DISCOVER</a>
 						</div>
 					</div>
 					<div class="offer-card text-white">
@@ -75,7 +71,7 @@
 							<span>Artifacts</span>
 							<h2>Greeting Cards</h2>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum sus-pendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
-							<a href="#" class="site-btn sb-line">DISCOVER</a>
+							<a href="{{ url('/category/4') }}" class="btn btn-dark">DISCOVER</a>
 						</div>
 					</div>
 					<div class="offer-card text-white">
@@ -94,7 +90,7 @@
 
 
 
-	<!-- Features section -->
+	{{-- <!-- Features section -->
 	<section class="features-section">
 		<div class="container-fluid">
 			<div class="row">
@@ -205,7 +201,7 @@
 		</div>
 	</section>
 	<!-- letest product section end -->
-
+ --}}
 
 
 	{{-- <!-- Product filter section -->

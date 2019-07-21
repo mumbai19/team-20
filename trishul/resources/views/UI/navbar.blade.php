@@ -64,7 +64,7 @@
         <div class="container">
             <!-- menu -->
             <ul class="main-menu">
-                <li><a href="{{ url('/') }}">Home</a></li>
+                {{-- <li><a href="{{ url('/') }}">Home</a></li> --}}
                 <li><a href="#">Products</a>
                     <ul class="sub-menu">
                         <li><a href="{{ url('/category/0') }}">Bags</a></li>
