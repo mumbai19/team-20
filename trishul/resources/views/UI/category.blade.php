@@ -34,7 +34,8 @@
 									</div>
 									<div class="pi-text">
 										<h6>₹ {{$product->prod_price}}</h6>
-										<p>{{$product->prod_name}}</p>
+										<p>{{$product->prod_name}}</p><br>
+										<p>{{$product->prod_desc}}</p>
 									</div>
 								</div>
 							</div>

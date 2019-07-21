@@ -83,6 +83,7 @@
                         <li><a href="{{ url('/analyse') }}">Analyse</a></li>
                     @endif
                 @endif
+    
                 <li><a href="{{ url('/contact') }}">Contact us</a></li>
                 
                                     
