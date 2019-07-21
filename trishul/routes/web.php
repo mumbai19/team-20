@@ -27,13 +27,31 @@ Route::get('/category', function () {
     return view('UI.category');
 });
 
-Route::get('/cart', function () {
-    return view('UI.cart');
-});
 
 Route::get('/donate', function () {
     return view('UI.donate');
 });
+
+// Route::get('/cart', function () {
+//     return view('UI.cart');
+// });
+
+Route::get('/donate', function () {
+    return view('UI.donate');
+});
+
+Route::get('/contact', function () {
+    return view('UI.contact');
+});
+
+Route::get('/add', function () {
+    return view('UI.add');
+});
+
+Route::get('/analyse', function () {
+    return view('UI.analyse');
+});
+
 
 Route::get('asia/japan', function () {
     return view('UI.donate');
@@ -44,5 +62,8 @@ Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
 
 Route::get('/category/{category}' , 'ProductController@list_products');
 
+// Route::get('/print' , 'OrdersController@print');
+
 Route::get('/cart/{product}/{category}' ,  'CartController@add_to_cart');
 
+Route::get('/cart' ,  'CartController@show_cart');

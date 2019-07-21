@@ -8,6 +8,18 @@
 							<?php 
 								if($category==0)
 								$category1="bags";
+								if($category==1)
+								$category1="keychains";
+								if($category==2)
+								$category1="bookmarks";
+								if($category==3)
+								$category1="paperweights";
+								if($category==4)
+								$category1="greeting_cards";
+								if($category==5)
+								$category1="jewellery";
+								if($category==6)
+								$category1="candles";
 							?>
 							
 							@foreach ($products as $product)
@@ -38,7 +50,7 @@
 				</div>
 			</div>
 		</div>
-	</section> --}}
+	</section>
 	<!-- Category section end -->
 
 

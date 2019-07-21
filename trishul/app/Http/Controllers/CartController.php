@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Auth;
+use DB;
 use App\Cart;
 use App\Product;
 use Illuminate\Http\Request;
@@ -34,9 +35,30 @@ class CartController extends Controller
         }
             
     }
-    public function index()
+    public function show_cart()
     {
-        //
+        $user = auth()->user();
+        // dd($user);
+        $list = array();
+        if(Auth::check())
+        {
+
+            $product_ids = DB::table('carts')->select('prod_id') ->where('cust_id', $user->id)->get();
+            // dd($product_ids);
+            foreach($product_ids as $product_id){
+                    // var_dump();
+                    $temp = DB::table('products')->select('prod_id','prod_name','prod_price','prod_category') ->where('prod_id', $product_id->prod_id)->get();
+                    
+                    array_push($list, $temp);
+
+            }
+            return view('UI.cart')->with('products',$list);
+        }
+        else{
+            return redirect("/login");
+        }
+        
+        
     }
 
     /**
@@ -68,7 +90,7 @@ class CartController extends Controller
      */
     public function show(Cart $cart)
     {
-        //
+        
     }
 
     /**

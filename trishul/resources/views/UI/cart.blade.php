@@ -32,17 +32,13 @@
 </head>
 <body>
 	<!-- Page Preloder -->
-	<div id="preloder">
-		<div class="loader"></div>
-	</div>
-
 	<!-- Header section -->
 	@include('UI.navbar')
 	<!-- Header section end -->
 
 
 	<!-- Page info -->
-	<div class="page-top-info">
+	{{-- <div class="page-top-info">
 		<div class="container">
 			<h4>Your cart</h4>
 			<div class="site-pagination">
@@ -50,47 +46,62 @@
 				<a href="">Your cart</a>
 			</div>
 		</div>
-	</div>
+	</div> --}}
 	<!-- Page info end -->
 
 
 	<!-- cart section end -->
-	<section class="cart-section spad">
+	<section class="cart-section " style="margin-top:3%;margin-bottom:3%">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-8">
 					<div class="cart-table">
-						<h3>Your Cart</h3>
 						<div class="cart-table-warp">
 							<table>
 							<thead>
 								<tr>
-									<th class="product-th">Product</th>
-									<th class="quy-th">Quantity</th>
-									<th class="size-th">SizeSize</th>
-									<th class="total-th">Price</th>
+									<th class="product-th"><b><h3>Product</h3></b></th>
+									
+									<th class="total-th"><h3><b>Price</h3></b></th>
 								</tr>
 							</thead>
 							<tbody>
+									
+								<?php $total=0 ?>
+								@foreach($products as $prod)
+								<?php 
+									
+									$category=$prod[0]->prod_category;
+									if($category==0)
+									$category1="bags";
+									if($category==1)
+									$category1="keychains";
+									if($category==2)
+									$category1="bookmarks";
+									if($category==4)
+									$category1="greeting_cards";
+									if($category==5)
+									$category1="jewellery";
+									if($category==6)
+									$category1="candles";
+
+									$total+=$prod[0]->prod_price;
+								?>
+								
 								<tr>
 									<td class="product-col">
-										<img src="img/cart/1.jpg" alt="">
+										<img src="../img/product/{{$category1}}/{{$category1}}_{{$prod[0]->prod_id}}.jpg" alt="" style="height:75px">
 										<div class="pc-title">
-											<h4>Animal Print Dress</h4>
-											<p>$45.90</p>
+											<h4>{{$prod[0]->prod_name}}</h4>
 										</div>
 									</td>
-									<td class="quy-col">
-										<div class="quantity">
-					                        <div class="pro-qty">
-												<input type="text" value="1">
-											</div>
-                    					</div>
-									</td>
-									<td class="size-col"><h4>Size M</h4></td>
-									<td class="total-col"><h4>$45.90</h4></td>
+									
+									<td class="total-col"><h4><b>₹ {{$prod[0]->prod_price}}</b></h4></td>
+									
 								</tr>
-								<tr>
+								
+								@endforeach
+								{{-- <tr>
 									<td class="product-col">
 										<img src="img/cart/2.jpg" alt="">
 										<div class="pc-title">
@@ -125,202 +136,34 @@
 									</td>
 									<td class="size-col"><h4>Size M</h4></td>
 									<td class="total-col"><h4>$45.90</h4></td>
-								</tr>
+								</tr> --}}
 							</tbody>
 						</table>
 						</div>
 						<div class="total-cost">
-							<h6>Total <span>$99.90</span></h6>
+						<h6 style="float:right;margin-right:20px;">Total <span>₹ {{$total}}</span></h6>
+						<a style="float:left;margin-left:20px" href="" class="btn btn-dark">Proceed to checkout</a><br>
 						</div>
 					</div>
 				</div>
 				<div class="col-lg-4 card-right">
-					<form class="promo-code-form">
+					{{-- <form class="promo-code-form">
 						<input type="text" placeholder="Enter promo code">
 						<button>Submit</button>
-					</form>
-					<a href="" class="site-btn">Proceed to checkout</a>
-					<a href="" class="site-btn sb-dark">Continue shopping</a>
+					</form> --}}
+					
 				</div>
 			</div>
 		</div>
 	</section>
 	<!-- cart section end -->
 
-	<!-- Related product section -->
-	<section class="related-product-section">
-		<div class="container">
-			<div class="section-title text-uppercase">
-				<h2>Continue Shopping</h2>
-			</div>
-			<div class="row">
-				<div class="col-lg-3 col-sm-6">
-					<div class="product-item">
-						<div class="pi-pic">
-							<div class="tag-new">New</div>
-							<img src="./img/product/2.jpg" alt="">
-							<div class="pi-links">
-								<a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
-								<a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
-							</div>
-						</div>
-						<div class="pi-text">
-							<h6>$35,00</h6>
-							<p>Black and White Stripes Dress</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-sm-6">
-					<div class="product-item">
-						<div class="pi-pic">
-							<img src="./img/product/5.jpg" alt="">
-							<div class="pi-links">
-								<a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
-								<a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
-							</div>
-						</div>
-						<div class="pi-text">
-							<h6>$35,00</h6>
-							<p>Flamboyant Pink Top </p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-sm-6">
-					<div class="product-item">
-						<div class="pi-pic">
-							<img src="./img/product/9.jpg" alt="">
-							<div class="pi-links">
-								<a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
-								<a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
-							</div>
-						</div>
-						<div class="pi-text">
-							<h6>$35,00</h6>
-							<p>Flamboyant Pink Top </p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-sm-6">
-					<div class="product-item">
-						<div class="pi-pic">
-							<img src="./img/product/1.jpg" alt="">
-							<div class="pi-links">
-								<a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
-								<a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
-							</div>
-						</div>
-						<div class="pi-text">
-							<h6>$35,00</h6>
-							<p>Flamboyant Pink Top </p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- Related product section end -->
+	<!-- Related product section --><!-- Related product section end -->
 
 
 
 	<!-- Footer section -->
-	<section class="footer-section">
-		<div class="container">
-			<div class="footer-logo text-center">
-				<a href="index.html"><img src="./img/logo-light.png" alt=""></a>
-			</div>
-			<div class="row">
-				<div class="col-lg-3 col-sm-6">
-					<div class="footer-widget about-widget">
-						<h2>About</h2>
-						<p>Donec vitae purus nunc. Morbi faucibus erat sit amet congue mattis. Nullam frin-gilla faucibus urna, id dapibus erat iaculis ut. Integer ac sem.</p>
-						<img src="img/cards.png" alt="">
-					</div>
-				</div>
-				<div class="col-lg-3 col-sm-6">
-					<div class="footer-widget about-widget">
-						<h2>Questions</h2>
-						<ul>
-							<li><a href="">About Us</a></li>
-							<li><a href="">Track Orders</a></li>
-							<li><a href="">Returns</a></li>
-							<li><a href="">Jobs</a></li>
-							<li><a href="">Shipping</a></li>
-							<li><a href="">Blog</a></li>
-						</ul>
-						<ul>
-							<li><a href="">Partners</a></li>
-							<li><a href="">Bloggers</a></li>
-							<li><a href="">Support</a></li>
-							<li><a href="">Terms of Use</a></li>
-							<li><a href="">Press</a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-lg-3 col-sm-6">
-					<div class="footer-widget about-widget">
-						<h2>Questions</h2>
-						<div class="fw-latest-post-widget">
-							<div class="lp-item">
-								<div class="lp-thumb set-bg" data-setbg="img/blog-thumbs/1.jpg"></div>
-								<div class="lp-content">
-									<h6>what shoes to wear</h6>
-									<span>Oct 21, 2018</span>
-									<a href="#" class="readmore">Read More</a>
-								</div>
-							</div>
-							<div class="lp-item">
-								<div class="lp-thumb set-bg" data-setbg="img/blog-thumbs/2.jpg"></div>
-								<div class="lp-content">
-									<h6>trends this year</h6>
-									<span>Oct 21, 2018</span>
-									<a href="#" class="readmore">Read More</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-sm-6">
-					<div class="footer-widget contact-widget">
-						<h2>Questions</h2>
-						<div class="con-info">
-							<span>C.</span>
-							<p>Your Company Ltd </p>
-						</div>
-						<div class="con-info">
-							<span>B.</span>
-							<p>1481 Creekside Lane  Avila Beach, CA 93424, P.O. BOX 68 </p>
-						</div>
-						<div class="con-info">
-							<span>T.</span>
-							<p>+53 345 7953 32453</p>
-						</div>
-						<div class="con-info">
-							<span>E.</span>
-							<p>office@youremail.com</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="social-links-warp">
-			<div class="container">
-				<div class="social-links">
-					<a href="" class="instagram"><i class="fa fa-instagram"></i><span>instagram</span></a>
-					<a href="" class="google-plus"><i class="fa fa-google-plus"></i><span>g+plus</span></a>
-					<a href="" class="pinterest"><i class="fa fa-pinterest"></i><span>pinterest</span></a>
-					<a href="" class="facebook"><i class="fa fa-facebook"></i><span>facebook</span></a>
-					<a href="" class="twitter"><i class="fa fa-twitter"></i><span>twitter</span></a>
-					<a href="" class="youtube"><i class="fa fa-youtube"></i><span>youtube</span></a>
-					<a href="" class="tumblr"><i class="fa fa-tumblr-square"></i><span>tumblr</span></a>
-				</div>
-
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --> 
-<p class="text-white text-center mt-5">Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a></p>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-
-			</div>
-		</div>
-	</section>
+	
 	<!-- Footer section end -->
 
 
@@ -334,6 +177,29 @@
 	<script src="js/jquery.zoom.min.js"></script>
 	<script src="js/jquery-ui.min.js"></script>
 	<script src="js/main.js"></script>
+	
+<script type="text/javascript">
+    /* NOTE : Use web server to view HTML files as real-time update will not work if you directly open the HTML file in the browser. */
+    (function(d, m){
+      var kommunicateSettings = {"appId":"1c12616223f5cff7e3926090b28d4b9bc","conversationTitle":"DILIP NARINGREKAR","popupWidget":true,
+       "onInit": function() {
+                   var style = document.createElement('style');
+                   var heightAndWidth = ".change-kommunicate-iframe-height{height:390px!important;width: 350px!important;}";
+                   var classSettings = ".change-kommunicate-iframe-height{box-shadow: rgba(0, 0, 0, 0.3) 0px 1.5rem 2rem!important;max-height:calc(100% - 30px) !important;}" + heightAndWidth;
+                   style.type = 'text/css';
+                   style.innerHTML = classSettings;
+                   document.getElementsByTagName('head')[0].appendChild(style);
 
+                   KommunicateGlobal.document.getElementById('mck-sidebox-launcher').addEventListener('click',function(){ var testClick = parent.document.getElementById("kommunicate-widget-iframe"); testClick.classList.add("change-kommunicate-iframe-height"); });
+
+                   KommunicateGlobal.document.getElementById('km-chat-widget-close-button').addEventListener('click',function(){ var testClick = parent.document.getElementById("kommunicate-widget-iframe"); testClick.classList.remove("change-kommunicate-iframe-height"); });
+               }
+           };
+      var s = document.createElement("script"); s.type = "text/javascript"; s.async = true;
+      s.src = "https://widget.kommunicate.io/v2/kommunicate.app";
+      var h = document.getElementsByTagName("head")[0]; h.appendChild(s);
+      window.kommunicate = m; m._globals = kommunicateSettings;
+    })(document, window.kommunicate || {});
+</script>
 	</body>
 </html>

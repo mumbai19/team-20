@@ -31,7 +31,7 @@
             <div class="row">
                 <div class="col-lg-2 text-center text-lg-left">
                     <!-- logo -->
-                    <a href="./index.blade.php" class="site-logo">
+                    <a href="{{ url('/') }}" class="site-logo">
                         <h2>Trishul</h2>
                     </a>
                 </div>
@@ -70,7 +70,6 @@
                         <li><a href="{{ url('/category/0') }}">Bags</a></li>
                         <li><a href="{{ url('/category/1') }}">Keychains</a></li>
                         <li><a href="{{ url('/category/2') }}">Bookmarks</a></li>
-                        <li><a href="{{ url('/category/3') }}">Paperweights</a></li>
                         <li><a href="{{ url('/category/4') }}">Greeting Cards</a></li>
                         <li><a href="{{ url('/category/5') }}">Candles</a></li>
                         <li><a href="{{ url('/category/6') }}">Jewellery</a></li>
@@ -78,7 +77,15 @@
                     </ul>
                 </li>
                 <li><a href="{{ url('/donate') }}">Donate</a></li>
+                @if(Auth::check())        
+                    @if(Auth::user()->email == "admin@gmail.com")
+                        <li><a href="{{ url('/add') }}">Add Product</a></li>
+                        <li><a href="{{ url('/analyse') }}">Analyse</a></li>
+                    @endif
+                @endif
                 <li><a href="{{ url('/contact') }}">Contact us</a></li>
+                
+                                    
             </ul>
         </div>
     </nav>
